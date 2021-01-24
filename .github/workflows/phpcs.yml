@@ -14,6 +14,6 @@ jobs:
       env:
         GH_BOT_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
         SKIP_FOLDERS: ".github"
-        PHPCS_SNIFFS_EXCLUDE: ""
+        PHPCS_SNIFFS_EXCLUDE: false
       with:
         args: "Squiz"
