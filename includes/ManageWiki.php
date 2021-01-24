@@ -7,7 +7,7 @@ class ManageWiki {
 		// Checks ManageWiki module is enabled before doing anything
 		// $verbose means output an error. Otherwise return true/false.
 		if ( !MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'managewiki')->get( 'ManageWiki')[$module] ) {
-			if ( $verbose && $out ) {
+			if (              $verbose && $out ) {
 				$out->addWikiMsg( 'managewiki-disabled', $module );
 			}
 
@@ -52,10 +52,11 @@ class ManageWiki {
 			}
 		}
 
-		return $timeZoneList;
+		    return $timeZoneList;
 	}
 
-	public static function handleMatrix( $conversion, $to ) {
+	public
+		static function handleMatrix( $conversion, $to ) {
 		if ( $to == 'php' ) {
 			// $to is php, therefore $conversion must be json
 			$phpin = json_decode( $conversion, true );
